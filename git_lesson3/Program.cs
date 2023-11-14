@@ -1,10 +1,15 @@
-﻿namespace git_lesson3
+﻿using System.Text;
+
+namespace git_lesson3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             double operand1, operand2, result;
+
+            Console.OutputEncoding = Encoding.Unicode; //Для корректного використання укр. мови
+            Console.InputEncoding = Encoding.Unicode;  //Те саме при вводі
 
             Console.WriteLine("Введіть перше число: ");
             operand1 = Convert.ToDouble(Console.ReadLine());
@@ -41,22 +46,15 @@
                     {
                         if (operand2 == 0)
                         {
-                            Console.WriteLine("На нуль ділити не мона!!!");
+                            Console.WriteLine("На нуль ділити не можна!!!");
                         }
                         else
                         {
                             result = operand1 / operand2;
                             Console.WriteLine($" Частка чисел = {operand1} / {operand2} = {result}");
-
-
                         }
-
                         break;
-
                     }
-
-
-
             }
             Console.ReadKey();
 
